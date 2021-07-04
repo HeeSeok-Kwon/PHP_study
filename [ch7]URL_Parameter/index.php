@@ -10,7 +10,7 @@
       <li><a href="index.php?id=HTML">HTML</a></li>
       <li><a href="index.php?id=CSS">CSS</a></li>
       <li><a href="index.php?id=JavaScript">JavaScript</a></li>
-    </lo>
+    </ol>
     <h2>
       <?php
         echo $_GET['id'];

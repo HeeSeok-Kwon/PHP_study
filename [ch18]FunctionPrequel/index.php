@@ -14,7 +14,7 @@
       <?php
         print_list();
       ?>
-    </lo>
+    </ol>
     <h2>
       <?php
         print_title();

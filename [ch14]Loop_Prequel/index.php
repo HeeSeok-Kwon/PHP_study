@@ -25,7 +25,7 @@
           $i = $i + 1;
         }
       ?>
-    </lo>
+    </ol>
     <h2>
       <?php
       if(isset($_GET['id'])){

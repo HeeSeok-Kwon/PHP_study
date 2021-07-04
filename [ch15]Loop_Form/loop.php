@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
+    <h1>While</h1>
     <?php
       echo '1<br>';
       $i = 0;

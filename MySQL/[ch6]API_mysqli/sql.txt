@@ -1,0 +1,12 @@
+set global general_log=on;
+
+show variables like 'general%';
+
+general_log_file 경로 찾아가서
+Window --> type 파일명
+Linux --> cat 파일명
+
+set global general_log=off;
+
+show variables like 'general%';
+

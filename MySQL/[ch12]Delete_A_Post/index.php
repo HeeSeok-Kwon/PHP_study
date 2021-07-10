@@ -16,12 +16,7 @@
     );
 
   $update_link = '';
-  $delete_link = '
-    <form action="process_delete.php" method="post">
-      <input type="hidden" name="id" value="'.$_GET['id'].'">
-      <input type="submit" value="delete">
-    </form>
-  ';
+  $delete_link = '';
 
   if(isset($_GET['id'])) {
     // Protect code for SQL injection

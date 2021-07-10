@@ -3,7 +3,7 @@
 
   $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   $filtered = array (
-    'title'=>mysqli_real_escape_string($myssqli, $_POST['title']),
+    'title'=>mysqli_real_escape_string($mysqli, $_POST['title']),
     'description'=>mysqli_real_escape_string($mysqli, $_POST['description'])
   );
 

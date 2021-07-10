@@ -1,5 +1,5 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   $sql = "SELECT * FROM topic";
   $result = mysqli_query($mysqli, $sql);
   $list = '';

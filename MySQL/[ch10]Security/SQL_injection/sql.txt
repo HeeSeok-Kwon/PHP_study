@@ -1,0 +1,8 @@
+-- SELECT * FROM topic;
+SELECT * FROM topic; -- WHERE id = 1;
+
+mysqli_multi_query()
+SELECT * FROM topic; SELECT * FROM topic WHERE id = 1;
+
+INSERT INTO topic (title, description, created) VALUES('Hehe', 'haha', NOW());
+INSERT INTO topic (title, description, created) VALUES('Hehe', 'haha', '2018-1-1 00:00:00'); -- NOW());

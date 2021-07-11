@@ -1,7 +1,7 @@
 <?php
   // var_dump($_POST);
 
-  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   // print_r($_POST);
   $filtered = array (
     'title'=>mysqli_real_escape_string($mysqli, $_POST['title']),

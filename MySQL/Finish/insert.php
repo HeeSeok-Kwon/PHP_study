@@ -6,7 +6,7 @@
   // echo $row['_msg'];
 
   // 연결 및 쿼리문 전송 mysqli_connect & mysqli_query
-  // $mysqli = mysqli_connect("localhost", "root", "******", "opentutorials");
+  // $mysqli = mysqli_connect("localhost", "user", "******", "opentutorials");
   // mysqli_query($mysqli, "
   //   INSERT INTO topic (
   //     title,
@@ -19,7 +19,7 @@
   //   )");
 
   // SQL 출력 mysqli_error
-  // $mysqli = mysqli_connect("localhost", "root", "******", "opentutorials");
+  // $mysqli = mysqli_connect("localhost", "user", "******", "opentutorials");
   // $sql = "
   //   INSERT INTO topic (
   //     title,
@@ -34,7 +34,7 @@
   //   $result = mysqli_query($mysqli, $sql);
 
   // 오류 출력 mysqli_error
-  // $mysqli = mysqli_connect("localhost", "root", "******", "opentutorials");
+  // $mysqli = mysqli_connect("localhost", "user", "******", "opentutorials");
   // $sql = "
   //   INSERT INTO topic (
   //     title,
@@ -49,7 +49,7 @@
   //   echo mysqli_error($mysqli);
 
   // 오류 출력 mysqli_error
-  $mysqli = mysqli_connect("localhost", "root", "******", "opentutorials");
+  $mysqli = mysqli_connect("localhost", "user", "******", "opentutorials");
   $sql = "
     INSERT INTO topic (
       title,

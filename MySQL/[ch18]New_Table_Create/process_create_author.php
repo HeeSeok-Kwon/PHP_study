@@ -19,6 +19,6 @@
     error_log(mysqli_error($mysqli));
   } else {
     // echo '성공했습니다. <a href="author.php">돌아가기</a>';
-    header("Location: author.php"); // ''로 감싸면 비정상 작동
+    header('Location: author.php'); 
   }
 ?>

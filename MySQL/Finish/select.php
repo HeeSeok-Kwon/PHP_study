@@ -1,7 +1,7 @@
 <?php
 
   // select 사용법 1
-  // $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  // $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   // $sql = "SELECT * FROM topic";
   // $result = mysqli_query($mysqli, $sql);
   // // var_dump($result);
@@ -9,7 +9,7 @@
   // $row = print_r(mysqli_fetch_array($result));
 
   // select 사용법 2
-  // $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  // $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   // echo "<h1>single row</h1>";
   // $sql = "SELECT * FROM topic WHERE id = 2";
   // $result = mysqli_query($mysqli, $sql);
@@ -18,7 +18,7 @@
   // echo $row['description'];
 
   // select 사용법 3-1
-  // $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  // $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   // echo "<h1>multi rows</h1>";
   // $sql = "SELECT * FROM topic";
   // $result = mysqli_query($mysqli, $sql);
@@ -45,7 +45,7 @@
   // var_dump($row)
 
   // select 사용법 3-2
-  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   echo "<h1>single row</h1>";
   $sql = "SELECT * FROM topic WHERE id = 2";
   $result = mysqli_query($mysqli, $sql);

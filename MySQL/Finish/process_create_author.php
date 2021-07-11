@@ -1,5 +1,5 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   $filtered = array (
     'name'=>mysqli_real_escape_string($mysqli, $_POST['name']),
     'profile'=>mysqli_real_escape_string($mysqli, $_POST['profile'])

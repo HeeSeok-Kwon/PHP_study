@@ -1,5 +1,5 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
 ?>
 
 <?php
@@ -11,9 +11,7 @@
     $select_form .= '<option value="'.$row['id'].'">'.$row['name'].'</option>';
   }
   $select_form .= '</select>';
-?>
-
-<?php
+  // update
   $escaped = array(
     'id'=>'',
     'title'=>'',
@@ -43,8 +41,9 @@
     $header2 = "Update Form";
     $label_submit = 'Update music';
     $form_action = "process_update_music.php";
-    $form_id = '<input type="text" name="id" value="'.$_GET['id'].'">';
-    $select_form = '<input type="text" name="id" value="'.$escaped['singer_id'].'">';
+    $form_id = '<input type="text" readonly name="id" value="'.$escaped['id'].'">';
+    // echo $escaped['id'];
+    $select_form = '<input type="text" readonly name="singer_id" value="'.$escaped['singer_id'].'">';
   }
 ?>
 
@@ -79,6 +78,12 @@
             <td><?= $filtered['likes'] ?></td>
             <td><?= $filtered['singer_id'] ?></td>
             <td><a href="index.php?id=<?= $filtered['id']?>">update</a></td>
+            <td>
+              <form action="process_delete_author.php" method="post" onsubmit="if(!confirm('sure')){return false;}">
+                <input type="hidden" name="id" value=<?= $filtered['id'] ?>>
+                <input type="submit" value="delete">
+              </form>
+            </td>
           </tr>
           <?php
         }

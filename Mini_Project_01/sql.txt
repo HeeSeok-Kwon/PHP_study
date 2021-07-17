@@ -28,3 +28,8 @@ INSERT INTO singer VALUES(2, "Aespa", "SM");
 INSERT INTO singer VALUES(3, "BlackPink", "YG");
 INSERT INTO singer VALUES(4, "TOY", "antenna");
 INSERT INTO singer VALUES(5, "IU", "EDAM");
+
+
+ALTER TABLE music ADD CONSTRAINT FOREIGN KEY(singer_id) REFERENCES singer(id) ON DELETE CASCADE;
+
+select * from information_schema.table_constraints where table_name = 'music';

@@ -5,21 +5,17 @@
   // print_r($_POST);
   $filtered = array (
     'id'=>mysqli_real_escape_string($mysqli ,$_POST['id']),
-    'title'=>mysqli_real_escape_string($mysqli ,$_POST['title']),
-    'album'=>mysqli_real_escape_string($mysqli ,$_POST['album']),
-    'likes'=>mysqli_real_escape_string($mysqli ,$_POST['likes']),
-    'singer_id'=>mysqli_real_escape_string($mysqli ,$_POST['singer_id'])
+    'name'=>mysqli_real_escape_string($mysqli ,$_POST['name']),
+    'company'=>mysqli_real_escape_string($mysqli ,$_POST['company']),
   );
 
   $sql = "
-    INSERT INTO music
-      (id, title, album, likes, singer_id)
+    INSERT INTO singer
+      (id, name, company)
       VALUES(
         '{$filtered['id']}',
-        '{$filtered['title']}',
-        '{$filtered['album']}',
-        '{$filtered['likes']}',
-        '{$filtered['singer_id']}'
+        '{$filtered['name']}',
+        '{$filtered['company']}'
         )";
   // die($sql);
   $result = mysqli_multi_query($mysqli, $sql);
@@ -28,7 +24,7 @@
     error_log(mysqli_error($mysqli));
   } else {
     // echo '성공했습니다. <a href="index.php">돌아가기</a>';
-    header('Location: index.php');
+    header('Location: singer.php');
   }
   // echo $sql;
 ?>

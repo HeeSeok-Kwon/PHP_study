@@ -1,5 +1,5 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
 ?>
 
 <?php
@@ -79,7 +79,7 @@
             <td><?= $filtered['singer_id'] ?></td>
             <td><a href="index.php?id=<?= $filtered['id']?>">update</a></td>
             <td>
-              <form action="process_delete_author.php" method="post" onsubmit="if(!confirm('sure')){return false;}">
+              <form action="process_delete_music.php" method="post" onsubmit="if(!confirm('sure')){return false;}">
                 <input type="hidden" name="id" value=<?= $filtered['id'] ?>>
                 <input type="submit" value="delete">
               </form>
@@ -100,5 +100,7 @@
       <?= $select_form ?>
       <p><input type="submit" value="<?= $label_submit ?>"></p>
     </form>
+
+    <p><a href="singer.php">Go to Singer</a></p>
   </body>
 </html>

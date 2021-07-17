@@ -1,5 +1,5 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'root', 'root', 'opentutorials');
+  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
   settype($_POST['id'], 'integer');
   // echo $_POST['id'];
   $filtered = array (

@@ -1,43 +1,10 @@
 <?php
-  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
+  require("lib/connect.php");
+  require("lib/singer_change_form.php");
+  require("view/top.php");
 ?>
 
-<?php
-  // update
-  $escaped = array(
-    'id'=>'',
-    'name'=>'',
-    'company'=>'',
-  );
-  $header2 = "Register Form";
-  $label_submit = 'Register singer';
-  $form_action = "process_register_singer.php";
-  $form_id = '<input type="text" name="id" placeholder="ID">';
-  if(isset($_GET['id'])) {
-    $filtered_id = mysqli_real_escape_string($mysqli, $_GET['id']);
-    // echo $filtered_id;
-    settype($filtered_id, 'integer');
-    $sql = "SELECT * FROM singer WHERE id={$filtered_id}";
-    // query
-    $result = mysqli_query($mysqli, $sql);
-    $row = mysqli_fetch_array($result);
-    $escaped['id'] = htmlspecialchars($row['id']);
-    $escaped['name'] = htmlspecialchars($row['name']);
-    $escaped['company'] = htmlspecialchars($row['company']);
-    // 보이는 제목 바꾸기
-    $header2 = "Update Form";
-    $label_submit = 'Update singer';
-    $form_action = "process_update_singer.php";
-    $form_id = '<input type="text" readonly name="id" value="'.$escaped['id'].'">';
-  }
-?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
   <body>
     <h1><a href="singer.php">Singer</a></h1>
     <table border=1>
@@ -82,5 +49,6 @@
     </form>
 
     <p><a href="index.php">Go to Music</a></p>
-  </body>
-</html>
+  <?
+    require("view/bottom.php");
+  ?>

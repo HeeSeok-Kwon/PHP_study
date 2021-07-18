@@ -1,7 +1,5 @@
 <?php
-  // var_dump($_POST);
-
-  $mysqli = mysqli_connect('localhost', 'user', '******', 'opentutorials');
+  require("lib/connect.php");
   // print_r($_POST);
   $filtered = array (
     'id'=>mysqli_real_escape_string($mysqli ,$_POST['id']),

@@ -5,4 +5,6 @@
 - 생활코딩! PHP+MySQL
 
 ### 파일상세
-- 챕터별로 폴더를 구분했습니다.
+- PHP : 교재의 PHP 내용 챕터별 구분
+- MySQL : 교재의 MySQL 내용 챕터별 구분
+- Mini Project : PHP + MySQL을 활용한 간단한 미니 프로젝트 
